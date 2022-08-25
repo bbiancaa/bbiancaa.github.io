@@ -15,7 +15,6 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-
 img {
     border-radius: 50%; 
     max-width:250px;
@@ -23,6 +22,8 @@ img {
     width: auto;
     height: auto;
 } 
+
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -61,7 +62,6 @@ img {
   width: 100%;
 }
 
-
 .nav {
   display: flex;
   justify-content: flex-end;
@@ -81,12 +81,12 @@ img {
 
 .nav-list a {
   display: block;
-  font-size: 2.2rem;
+  font-size: 2rem;
   padding: 2rem;
 }
 
 .nav-list a:hover {
-  background: var(--main-blue);
+  background: var(--main-gray);
 }
 
 .index-section {
@@ -107,6 +107,36 @@ img {
   color: var(--main-purple);
 }
 
+.contato-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  }
+  
+  .contato-section-header > h2 {
+    font-size: 6rem;
+  }
+  
+.contato-section-header > p {
+    font-size: 2rem;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--main-purple);
+}
+
+.contato-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
 footer {
   font-weight: 300;
   display: flex;
