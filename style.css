@@ -107,6 +107,36 @@ img {
   color: var(--main-purple);
 }
 
+.formacao-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  }
+  
+  .formacao-section-header > h2 {
+    font-size: 4rem;
+  }
+  
+.formacao-section-header > p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--main-purple);
+}
+.formacao-section img {
+    max-width:250px;
+    max-height:250px;
+    margin-top: 30px;
+} 
+
+
 .contato-section {
     display: flex;
     flex-direction: column;
