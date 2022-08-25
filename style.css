@@ -159,8 +159,9 @@ img {
     font-size: 2rem;
     font-weight: 30;
   }
+
   
-.centered > p {
+.centered > p, .centered h1 {
     font-size: 2rem;
     font-weight: 20;
     font-style: italic;
@@ -209,6 +210,33 @@ img {
     height: auto;
     padding: 20%;
   }
+
+  #customers {
+    font-family: 'Raleway', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: var(--main-purple);
+    margin-top: 30px !important;
+  }
+
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: var(--main-purple);
+    color: var(--main-white);
+
+  }
+
 footer {
   font-weight: 300;
   display: flex;
