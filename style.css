@@ -137,6 +137,13 @@ img {
     margin-top: 4rem;
     flex-wrap: wrap;
 }
+.contato-details {
+    padding : 15px;
+}
+.contato-links > a > img {
+    width:96px;
+    height:96px;
+} 
 footer {
   font-weight: 300;
   display: flex;
