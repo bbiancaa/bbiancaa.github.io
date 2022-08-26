@@ -15,6 +15,7 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+
 img {
     border-radius: 50%; 
     max-width:250px;
@@ -23,7 +24,10 @@ img {
     height: auto;
 } 
 
-
+img {
+    display: block;
+    width: 100%;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -33,8 +37,7 @@ body {
   color: var(--main-white);
 }
 
-h1,
-h2 {
+h1, h2 {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-align: center;
@@ -55,11 +58,6 @@ ul {
 a {
   text-decoration: none;
   color: var(--main-white);
-}
-
-img {
-  display: block;
-  width: 100%;
 }
 
 .nav {
@@ -89,7 +87,7 @@ img {
   background: var(--main-gray);
 }
 
-.index-section {
+.index-section, .formacao-section, .contato-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -107,74 +105,6 @@ img {
   color: var(--main-purple);
 }
 
-.formacao-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    background-color: #000;
-    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-  }
-  
-  .formacao-section-header > h2 {
-    font-size: 4rem;
-  }
-  
-.formacao-section-header > p {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 100;
-    font-style: italic;
-    color: var(--main-purple);
-}
-.formacao-section img {
-    max-width:250px;
-    max-height:250px;
-    margin-top: 30px;
-} 
-
-
-.contato-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #000;
-    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-  }
-  
-  .contato-section-header > h2 {
-    font-size: 6rem;
-  }
-  
-.contato-section-header > p {
-    font-size: 2rem;
-    font-weight: 100;
-    font-style: italic;
-    color: var(--main-purple);
-}
-
-.contato-links {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 980px;
-    margin-top: 4rem;
-    flex-wrap: wrap;
-}
-.contato-details {
-    padding : 15px;
-}
-.contato-links > a > img {
-    width:96px;
-    height:96px;
-} 
-
 .sobre-section {
     display: flex;
     flex-direction: column;
@@ -185,14 +115,14 @@ img {
     background-color: var(--main-white);
   }
   
-.centered > h2 {
+.sobre > h2 {
     font-size: 2rem;
     font-weight: 30;
     color : var(--main-white)
   }
 
   
-.centered > p, .centered h1 {
+.sobre > p, .sobre h1 {
     font-size: 2rem;
     font-weight: 20;
     font-style: italic;
@@ -201,7 +131,7 @@ img {
 .split {
     height: 100%;
     width: 50%;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     overflow-x: hidden;
@@ -226,7 +156,7 @@ img {
   }
   
   /* If you want the content centered horizontally and vertically */
-  .centered {
+  .sobre {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -235,7 +165,7 @@ img {
   }
   
   /* Style the image inside the centered container, if needed */
-  .centered img {
+  .sobre img {
     border-radius: 50%;
     max-width:150px;
     max-height:150px;
@@ -244,7 +174,7 @@ img {
     padding: 20%;
   }
 
-  #customers {
+  #sobre-skills {
     font-family: 'Raleway', sans-serif;
     border-collapse: collapse;
     width: 100%;
@@ -252,20 +182,65 @@ img {
     margin-top: 30px !important;
   }
 
-  #customers td, #customers th {
+  #sobre-skills td, #sobre-skills th {
     border: 1px solid #ddd;
     padding: 8px;
   }
   
-  
-  #customers th {
+  #sobre-skills th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
     background-color: var(--main-purple);
     color: var(--main-white);
+}
+  
+.formacao-section-header > h2 {
+    font-size: 4rem;
+}
+  
+.formacao-section-header > p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--main-purple);
+}
 
-  }
+.formacao-section img {
+    max-width:250px;
+    max-height:250px;
+    margin-top: 30px;
+} 
+
+.contato-section-header > h2 {
+    font-size: 6rem;
+}
+  
+.contato-section-header > p {
+    font-size: 2rem;
+    font-weight: 100;
+    font-style: italic;
+    color: var(--main-purple);
+}
+
+.contato-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contato-details {
+    padding : 15px;
+}
+
+.contato-links > a > img {
+    width:96px;
+    height:96px;
+} 
 
 footer {
   font-weight: 300;
@@ -273,7 +248,7 @@ footer {
   justify-content: space-evenly;
   padding: 0.25rem;
   background: var(--main-purple);
-  border-top: 4px solid var(--main-purple);
+  border-top: 4px solid var(--main-purple); 
 }
 
 footer > p {
